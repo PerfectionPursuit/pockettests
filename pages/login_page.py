@@ -1,5 +1,5 @@
-from pages.BasePage import BasePage
-from locators.LoginPageLocators import LoginPageLocators
+from pages.base_page import BasePage
+from locators.login_page_locators import LoginPageLocators
 from selenium import webdriver
 
 
@@ -33,12 +33,13 @@ class LoginPage(BasePage):
         return error.text
 
     def email_error_displayed(self):
-        error_bubble = self.driver.find_element(*LoginPageLocators.email_error)
+        error_bubble = self.driver.find_element(
+            *LoginPageLocators.email_error)
         return error_bubble.is_displayed()
 
     def email_error_text(self):
         error = self.driver.find_element(
-            *LoginPageLocators.password_error_text)
+            *LoginPageLocators.email_error)
         return error.text
 
     def login_error_displayed(self):

@@ -1,3 +1,4 @@
 {
-  "test_login.py::TestLoginPage::()::test_blank_email": true
+  "test_login.py::TestLoginPage::()::test_positive": true,
+  "test_login.py::TestLoginPage::()::test_positive1": true
 }
